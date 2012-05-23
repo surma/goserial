@@ -1,4 +1,4 @@
-package serial
+package goserial
 
 // #include <termios.h>
 // #include "serial.h"
