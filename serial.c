@@ -13,6 +13,7 @@ int serial_open(char *port, int baud) {
 	tcgetattr(fd, &options);
 	cfsetispeed(&options, baud);
 	cfsetospeed(&options, baud);
+
 	// CSIZE IS SO FUCKING IMPORTANT!
 	// e.g.: Mac OS X seems to set CS5 by default, so only *setting*
 	// CS8 doesn’t fix it. You have to *unset* all size bits others as well.
